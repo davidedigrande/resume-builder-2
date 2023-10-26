@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    </meta>
+</head>
+
+<body>
+    <div class="container" style="max-width: 297mm;">
+        <div class="row d-flex">
+            <!-- <div class="col-sm-auto">
+                <img src="https://media.licdn.com/dms/image/D4D03AQE-EbHVsQQr_g/profile-displayphoto-shrink_400_400/0/1686210194854?e=1691625600&v=beta&t=dxLCDj0RgSh1widPV0NT90icacZBE0w5srwdg6QZNto" class="img-responsive propic">
+            </div> -->
+            <div class="col">
+                <span class="txt-name">
+                    <strong>
+                        {{first_name}} <br>
+                        {{last_name}}
+                    </strong>
+                </span><br>
+                <span class="txt-2"><i>“{{citation.quote}}”</i> </span><br>
+            </div>
+            <div class="col d-flex flex-column text-end">
+                <div class="row">
+                    <span class="txt-1">
+                        <i class="bi bi-briefcase"></i>
+                        {{headline}}
+                    </span>
+                    <br>
+                    <span class="txt-1">
+                        <i class="bi bi-geo-alt"></i>
+                        {{location}}
+                    </span>
+                </div>
+                <div class="row flex-grow-1 align-items-end">
+                    <span class="txt-1">
+                        <a href="{{links.github}}"> <i class="bi bi-github"></i></a>
+                        <a href="{{links.linkedin}}"> <i class="bi bi-linkedin"></i></a>
+                        <a href="{{links.whatsapp}}"> <i class="bi bi-whatsapp"></i></a>
+                        <a href="mailto:{{links.envelope}}"> <i class="bi bi-envelope"></i></a>
+                        <a href="{{links.medium}}"> <i class="bi bi-medium"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-lm">
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">Technical Skills</span>
+                </strong>
+            </div>
+
+            <div class="section-box">
+                <span class="txt-2">
+                    {{skills}}
+                </span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">Technologies I used</span>
+                </strong>
+            </div>
+            <div class="section-box">
+                <span class="txt-2">
+                    {{technologies}}
+                </span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">Work Experience &nbsp;&nbsp;&nbsp;</span>
+                    <span class="txt-1" id="months-counter"></span></div>
+                    <script>
+                        var certainDate = new Date("2020-12-01");
+                        var today = new Date();
+                        var monthsPassed = (today.getFullYear() - certainDate.getFullYear()) * 12;
+                        monthsPassed -= certainDate.getMonth();
+                        monthsPassed += today.getMonth();
+                        yoe = parseInt(monthsPassed / 12);
+                        moe = monthsPassed - (yoe * 12);
+                        document.getElementById("months-counter").textContent = '[' + yoe.toString() + ' y. ' + moe.toString() + ' mo. as of ' + today.toLocaleDateString() + ']';
+                    </script>
+                </strong>
+            </div>
+            {% for item in experience %}
+            <div class="section-box">
+                <div class="row">
+                    <div class="col-3">
+                        <strong>
+                            <span class="txt-2">
+                                {{item.role}}
+                            </span>
+                        </strong>
+                        <br>
+                        <span class="txt-3">
+                            {{item.company}}
+                            <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
+                        </span>
+                        <br>
+                        <span class="txt-3">
+                            {{item.date_from}} - {{item.date_until}}
+                        </span>
+                        {% if item.duration %}
+                        <br>
+                        <span class="txt-3">
+                            [{{item.duration}}]
+                        </span>
+                        {% endif %}
+                    </div>
+                    <div class="col">
+                        <span class="txt-2">
+                            {{item.description}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">Certifications</span>
+                </strong>
+            </div>
+            {% for item in certifications %}
+            <div class="section-box">
+                <div class="row">
+                    <div class="col-3">
+                        <strong>
+                            <span class="txt-2">
+                                {{item.title}}
+                            </span>
+                        </strong>
+                        <br>
+                        <span class="txt-3">
+                            {{item.organization}}
+                            <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
+                        </span>
+                        <br>
+                        <span class="txt-3">
+                            {{item.date_obtained}}
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span class="txt-2">
+                            {{item.description}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">Education</span>
+                </strong>
+            </div>
+            {% for item in education %}
+            <div class="section-box">
+                <div class="row">
+                    <div class="col-3">
+                        <strong>
+                            <span class="txt-2">
+                                {{item.title}}
+                            </span>
+                        </strong>
+                        <br>
+                        <span class="txt-3">
+                            {{item.organization}}
+                            <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
+                        </span>
+                        <br>
+                        <span class="txt-3">
+                            {{item.date_from}} - {{item.date_until}}
+                        </span>
+                    </div>
+                    <div class="col">
+                        <span class="txt-2">
+                            {{item.description}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">Personal Projects</span>
+                </strong>
+            </div>
+            <div class="row">
+                {% for item in projects %}
+                <div class="col">
+                    <div class="section-box">
+                        <strong>
+                            <span class="txt-2">
+                                {{item.name}}
+                                <a href="{{item.url}}"><i class="bi bi-github"></i></a>
+                            </span>
+                        </strong>
+                        <br>
+                        <span class="txt-2">
+                            {{item.description}}
+                        </span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span class="txt-1">About me</span>
+                </strong>
+            </div>
+            <div class="section-box">
+                <!-- <strong><span class="txt-2">Bio</span></strong><br> -->
+                <span class="txt-2">
+                    {{bio}}
+                </span>
+            </div>
+            <!-- <div class="section-box">
+                <strong><span class="txt-2">Personal interests</span></strong><br>
+                <span class="txt-2">
+                    {{interests}}
+                </span>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+</html>

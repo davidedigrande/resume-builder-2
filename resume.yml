@@ -1,0 +1,82 @@
+first_name: First Name
+last_name: Last Name
+headline: Your Professional Title
+bio:
+  Brief bio or summary about yourself
+
+skills: |
+  - Skill 1
+  - Skill 2
+  - Skill 3
+
+technologies: |
+  - Technology 1
+  - Technology 2
+  - Technology 3
+
+location: Your Location
+links:
+  email: Your Email
+  whatsapp: WhatsApp Link
+  github: GitHub Link
+  linkedin: LinkedIn Link
+  instagram: Instagram Link
+  medium: Medium Link
+
+languages:
+  - language: Language 1
+    description: Proficiency Level
+  - language: Language 2
+    description: Proficiency Level
+
+projects:
+  - name: Project 1 Name
+    url: Project 1 URL
+    description: Project 1 Description
+  - name: Project 2 Name
+    url: Project 2 URL
+    description: Project 2 Description
+
+experience:
+  - role: Role 1
+    company: Company 1
+    date_from: Start Date
+    date_until: End Date or "ongoing"
+    description: Role 1 Description
+  - role: Role 2
+    company: Company 2
+    date_from: Start Date
+    date_until: End Date or "ongoing"
+    description: Role 2 Description
+
+education: 
+  - title: Education 1 Title
+    organization: Institution 1
+    date_from: Start Date
+    date_until: End Date
+    description: Education 1 Description
+  - title: Education 2 Title
+    organization: Institution 2
+    date_from: Start Date
+    date_until: End Date
+    description: Education 2 Description
+
+certifications:
+  - title: Certification 1
+    organization: Certifying Body 1
+    date_obtained: Date Obtained
+    description: Certification 1 Description
+  - title: Certification 2
+    organization: Certifying Body 2
+    date_obtained: Date Obtained
+    description: Certification 2 Description
+
+interests: |
+  Brief description of your interests and hobbies
+
+citation:
+  quote: Inspirational Quote
+  source: Quote Source
+
+footer:
+  Custom message or note about the resume
