@@ -87,3 +87,11 @@ span {
     height: 3.25em;
     border: 1px solid rgba(0, 0, 0, 0.075);
 }
+
+.tag {
+    background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 0.25rem;
+    padding: 1.5%;
+    font-size: 0.625rem;
+}
+
