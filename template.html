@@ -49,48 +49,52 @@
         <hr class="hr-lm">
         <div class="section">
             <div class="row">
-                <strong>
-                    <span class="txt-1">Relevant Experience &nbsp;&nbsp;&nbsp;</span>
-                    <span class="txt-1" id="months-counter"></span>
-                    <script>
-                        var certainDate = new Date("2020-12-01");
-                        var today = new Date();
-                        var monthsPassed = (today.getFullYear() - certainDate.getFullYear()) * 12;
-                        monthsPassed -= certainDate.getMonth();
-                        monthsPassed += today.getMonth();
-                        yoe = parseInt(monthsPassed / 12);
-                        moe = monthsPassed - (yoe * 12);
-                        document.getElementById("months-counter").textContent = '[' + yoe.toString() + ' y. ' + moe.toString() + ' mo. as of ' + today.toLocaleDateString() + ']';
-                    </script>
-                </strong>
+                <span>
+                <strong><span class="txt-1">&nbsp;&nbsp;&nbsp; Relevant Experience &nbsp;&nbsp;&nbsp;</span></strong>
+                <span class="txt-1" id="months-counter"></span>
+                <script>
+                    var certainDate = new Date("2020-12-01");
+                    var today = new Date();
+                    var monthsPassed = (today.getFullYear() - certainDate.getFullYear()) * 12;
+                    monthsPassed -= certainDate.getMonth();
+                    monthsPassed += today.getMonth();
+                    yoe = parseInt(monthsPassed / 12);
+                    moe = monthsPassed - (yoe * 12);
+                    document.getElementById("months-counter").textContent = '[' + yoe.toString() + ' y. ' + moe.toString() + ' mo. as of ' + today.toLocaleDateString() + ']';
+                </script>
+                </span>
             </div>
             {% for item in experience %}
             <div class="section-box">
                 <div class="row">
                     <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                {{item.role}}
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            {{item.company}}
-                            <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{{item.img}}" class="img">
+                            </div>
+                            <div class="col" style="padding-left: 0.5rem; padding-right: 0; margin-left: 1.25rem;">
+                                <strong>
+                                    <span class="txt-2">
+                                        {{item.role}}
+                                    </span>
+                                </strong>
+                                <br>
+                                <span class="txt-2">
+                                    {{item.company}}
+                                    <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="txt-2">
                             {{item.date_from}} - {{item.date_until}}
                         </span>
-                        {% if item.duration %}
                         <br>
-                        <span class="txt-3">
+                        <span class="txt-2">
                             [{{item.duration}}]
                         </span>
-                        {% endif %}
                         <br><br>
                         {% for tag in item.tags|sort %}
-                        <span class="tag">{{ tag }}</span>
+                        <span class="tag txt-3">{{ tag }}</span>
                         {% endfor %}
                     </div>
                     <div class="col">
@@ -105,7 +109,7 @@
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">Certifications</span>
+                    <span class="txt-1">&nbsp;&nbsp;&nbsp; Certifications</span>
                 </strong>
             </div>
             <div class="row">
@@ -137,7 +141,7 @@
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">Education</span>
+                    <span class="txt-1">&nbsp;&nbsp;&nbsp; Education</span>
                 </strong>
             </div>
             {% for item in education %}
@@ -171,7 +175,7 @@
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">Personal Projects</span>
+                    <span class="txt-1">&nbsp;&nbsp;&nbsp; Personal Projects</span>
                 </strong>
             </div>
             <div class="row">
@@ -196,47 +200,39 @@
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">Other Experience &nbsp;&nbsp;&nbsp;</span>
+                    <span class="txt-1">&nbsp;&nbsp;&nbsp; Other Experience</span>
                 </strong>
             </div>
-            {% for item in other_experience %}
-            <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
+            <div class="row">
+                {% for item in other_experience %}
+                <div class="col">
+                    <div class="section-box">
                         <strong>
                             <span class="txt-2">
                                 {{item.role}}
                             </span>
                         </strong>
-                        <br>
-                        <span class="txt-3">
-                            {{item.company}}
-                            <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
                         <span class="txt-3">
                             {{item.date_from}} - {{item.date_until}}
                         </span>
                         {% if item.duration %}
-                        <br>
                         <span class="txt-3">
                             [{{item.duration}}]
                         </span>
                         {% endif %}
-                    </div>
-                    <div class="col">
+                        <br>
                         <span class="txt-2">
                             {{item.description}}
                         </span>
                     </div>
                 </div>
+                {% endfor %} 
             </div>
-            {% endfor %}
         </div>
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">About me</span>
+                    <span class="txt-1">&nbsp;&nbsp;&nbsp; About me</span>
                 </strong>
             </div>
             <div class="section-box">

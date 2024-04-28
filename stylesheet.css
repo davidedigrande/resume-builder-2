@@ -67,6 +67,10 @@ body {
 
 a:link { text-decoration: none; }
 
+a {
+    color: inherit !important;
+}
+
 
 .section-box {
     background-color: rgba(0, 0, 0, .0250);
@@ -91,7 +95,12 @@ span {
 .tag {
     background-color: rgba(0, 0, 0, 0.075);
     border-radius: 0.25rem;
-    padding: 1.5%;
-    font-size: 0.625rem;
+    padding: 0.125rem;
 }
 
+.img {
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 0.25rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+}
