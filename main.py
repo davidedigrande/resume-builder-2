@@ -21,7 +21,9 @@ def replace_newlines(obj):
     elif isinstance(obj, list):
         return [replace_newlines(elem) for elem in obj]
     elif isinstance(obj, str):
-        return obj.replace('\n', '<br>')
+        obj = obj.replace("\n\n", '<br><br style="line-height: 50%">')
+        obj = obj.replace('\n', '<br>')
+        return obj
     else:
         return obj
 
