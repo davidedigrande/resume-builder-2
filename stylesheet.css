@@ -75,7 +75,7 @@ a {
 .section-box {
     background-color: rgba(0, 0, 0, .0250);
     border-radius: 0.5rem;
-    padding: 1.5%;
+    padding: 0.75rem;
     border: 1px solid rgba(0, 0, 0, 0.075);
     margin-bottom: 1.25%;
     line-height: 1rem;

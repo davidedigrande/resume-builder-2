@@ -116,25 +116,28 @@
             </div>
             <div class="row">
                 {% for item in certifications %}
-                <div class="col">
+                <div class="col-4">
                     <div class="section-box">
-                        <strong>
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="{{item.img}}" class="img">
+                            </div>
+                            <div class="col" style="padding-left: 0.5rem; padding-right: 0; margin-left: 1.25rem;">
+                                <strong><span class="txt-2">{{item.title}}</span></strong>
+                                <br>
+                                <span class="txt-2">
+                                    {{item.organization}}
+                                    <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
+                                </span>
+                            </div>
+                            <br>
                             <span class="txt-2">
-                                {{item.title}}
+                                {{item.date_obtained}}
                             </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            {{item.organization}}
-                            <a href="{{item.url}}"><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            {{item.date_obtained}}
-                        </span>
-                        <span class="txt-2">
-                            {{item.description}}
-                        </span>
+                            <span class="txt-2">
+                                {{item.description}}
+                            </span>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
