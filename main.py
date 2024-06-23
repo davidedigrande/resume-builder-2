@@ -1,5 +1,5 @@
 import yaml
-from jinja2 import Template
+from jinja2 import Template, Environment, FileSystemLoader
 
 
 def boldify(obj):
@@ -36,9 +36,9 @@ with open('resume.yml') as file:
 
 
 with open('template.html') as f:
-    template = Template(f.read())
-
-html = template.render(resume_data)
+    environment = Environment(loader=FileSystemLoader('.'))
+    template = environment.from_string(f.read())
+    html = template.render(resume_data)
 
 with open('resume.html', "w+") as f:
     f.write(html)

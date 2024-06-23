@@ -1,0 +1,25 @@
+<div class="section-box">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="{{item.img}}" class="img"></div>
+                <div class="col">
+                    <div class="row"><strong>{{item.role}}</strong></div>
+                    <div class="row"><a href="{{item.url}}">{{item.company}}</a></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                {{item.date_from}} - {{item.date_until}}</span>{% if item.duration %}<br>[{{item.duration}}]{% endif %}
+                </div>
+            </div>
+            {% if item.tags %}
+            <div class="row"><br class="half-br"></div>
+            <div class="row"><div class="col" style="padding: 0.5rem;">
+                {% for tag in item.tags|sort %}<div class="tag">&nbsp;{{ tag }}&nbsp;</div>{% endfor %}
+            </div></div>
+            {% endif %}
+        </div>
+        <div class="col-9"><span>{{item.description}}</span></div>
+    </div>
+</div>
