@@ -2,81 +2,45 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
     <meta charset="UTF-8">
     </meta>
 </head>
 
 <body>
     <div class="container" style="max-width: 297mm;">
-        <div class="row d-flex">
-            <!-- <div class="col-sm-auto">
-                <img src="https://media.licdn.com/dms/image/D4D03AQE-EbHVsQQr_g/profile-displayphoto-shrink_400_400/0/1686210194854?e=1691625600&v=beta&t=dxLCDj0RgSh1widPV0NT90icacZBE0w5srwdg6QZNto" class="img-responsive propic">
-            </div> -->
-            <div class="col">
-                <span class="txt-name">
-                    <strong>
-                        First Name <br>
-                        Last Name
-                    </strong>
-                </span><br>
-                <span class="txt-2"><i>“Inspirational Quote”</i> </span><br>
-            </div>
-            <div class="col d-flex flex-column text-end">
-                <div class="row">
-                    <span class="txt-1">
-                        <i class="bi bi-briefcase"></i>
-                        Your Professional Title
-                    </span>
-                    <br>
-                    <span class="txt-1">
-                        <i class="bi bi-geo-alt"></i>
-                        Your Location
-                    </span>
+        <div class="row">
+            <div class="col-9">
+                <div class="row" style="height: auto;">
+                    <strong style="font-size: 1.5rem">Davide Di Grande</strong>
                 </div>
-                <div class="row flex-grow-1 align-items-end">
-                    <span class="txt-1">
-                        <a href="GitHub Link"> <i class="bi bi-github"></i></a>
-                        <a href="LinkedIn Link"> <i class="bi bi-linkedin"></i></a>
-                        <a href="WhatsApp Link"> <i class="bi bi-whatsapp"></i></a>
-                        <a href="mailto:"> <i class="bi bi-envelope"></i></a>
-                        <a href="Medium Link"> <i class="bi bi-medium"></i></a>
-                    </span>
+                <div class="row"><span><i>“mental meandering and personal experimentation are sources of power, and head starts are overrated”</i> - David Epstein, Range</span></div>
+            </div>
+            <div class="col-3">
+                <div class="row" style="justify-content: flex-end;">
+                    <i class="bi bi-briefcase"></i><span>&nbsp;Software Engineer</span>
+                </div>
+                <div class="row" style="justify-content: flex-end;">
+                    <i class="bi bi-geo-alt"></i>&nbsp;Palermo, Italy
+                </div>
+                <div class="row" style="justify-content: flex-end;">
+                    <a href="https://github.com/davidedigrande"> <i class="bi bi-github"></i></a>&nbsp;
+                    <a href="https://www.linkedin.com/in/davide-di-grande-17bba01b8"> <i class="bi bi-linkedin"></i></a>&nbsp;
+                    <a href="https://wa.me/3457702684"> <i class="bi bi-whatsapp"></i></a>&nbsp;
+                    <a href="mailto:"> <i class="bi bi-envelope"></i></a>&nbsp;
+                    <a href="https://www.medium.com/@davidedigrande94"> <i class="bi bi-medium"></i></a>&nbsp;
                 </div>
             </div>
         </div>
         <hr class="hr-lm">
         <div class="section">
             <div class="row">
-                <strong>
-                    <span class="txt-1">Technical Skills</span>
-                </strong>
-            </div>
-
-            <div class="section-box">
-                <span class="txt-2">
-                    - Skill 1<br>- Skill 2<br>- Skill 3<br>
-                </span>
-            </div>
-        </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span class="txt-1">Technologies I used</span>
-                </strong>
-            </div>
-            <div class="section-box">
-                <span class="txt-2">
-                    - Technology 1<br>- Technology 2<br>- Technology 3<br>
-                </span>
-            </div>
-        </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span class="txt-1">Work Experience &nbsp;&nbsp;&nbsp;</span>
-                    <span class="txt-1" id="months-counter"></span></div>
+                <span>
+                    <strong><span>&nbsp;&nbsp;&nbsp; Relevant Experience
+                            &nbsp;&nbsp;&nbsp;</span></strong>
+                    <span id="months-counter"></span>
                     <script>
                         var certainDate = new Date("2020-12-01");
                         var today = new Date();
@@ -85,190 +49,286 @@
                         monthsPassed += today.getMonth();
                         yoe = parseInt(monthsPassed / 12);
                         moe = monthsPassed - (yoe * 12);
-                        document.getElementById("months-counter").textContent = '[' + yoe.toString() + ' y. ' + moe.toString() + ' mo. as of ' + today.toLocaleDateString() + ']';
+                        document.getElementById("months-counter").textContent = '[' + yoe.toString() + ' years ' + moe.toString() + ' months as of ' + today.toLocaleDateString() + ']';
                     </script>
-                </strong>
+                </span>
             </div>
             
             <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                Role 1
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            Company 1
-                            <a href=""><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            Start Date - End Date or "ongoing"
-                        </span>
-                        
-                    </div>
-                    <div class="col">
-                        <span class="txt-2">
-                            Role 1 Description
-                        </span>
-                    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="https://media.licdn.com/dms/image/C4D0BAQEbxadKbzhieg/company-logo_200_200/0/1658999407950/develhope_logo?e=1726099200&v=beta&t=V0ECzPApBJVWIiCayW6UySicZgGSDweU641dl_-3yyY" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Data Tutor</strong></div>
+                    <div class="row"><a href="None">Develhope</a></div>
                 </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">
+                Giu 2024 - Sep 2024</span><br>[3 months]
+                </div>
+                
             </div>
             
+        </div>
+        
+        <div class="col-9">Provided tutoring for a comprehensive data course, focusing on asynchronous exercises correction and conducting synchronous QA sessions with students. The course provides students with the required skills to succeed in the field from scratch, starting from some simple analyses in Excel, to advanced data manipulation with SQL, Python and Pandas.</div>
+        
+    </div>
+</div>
+            
             <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                Role 2
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            Company 2
-                            <a href=""><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            Start Date - End Date or "ongoing"
-                        </span>
-                        
-                    </div>
-                    <div class="col">
-                        <span class="txt-2">
-                            Role 2 Description
-                        </span>
-                    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="https://www.rwstech.com/wp-content/uploads/2024/02/cropped-favicon-rwstech-32x32.png" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Backend Engineer</strong></div>
+                    <div class="row"><a href="None">RWS Tech</a></div>
                 </div>
             </div>
+            <div class="row">
+                
+                <div class="col">Sep 2023 - <strong>present</strong></div>
+                
+            </div>
+            
+            <div class="row"><br class="half-br"></div>
+            <div class="row"><div class="col" style="padding: 0.5rem;">
+                <div class="tag">&nbsp;Agile&nbsp;</div><div class="tag">&nbsp;Docker&nbsp;</div><div class="tag">&nbsp;ETL&nbsp;</div><div class="tag">&nbsp;FastAPI&nbsp;</div><div class="tag">&nbsp;Git&nbsp;</div><div class="tag">&nbsp;OOP&nbsp;</div><div class="tag">&nbsp;ORM&nbsp;</div><div class="tag">&nbsp;Postgres&nbsp;</div><div class="tag">&nbsp;Python&nbsp;</div><div class="tag">&nbsp;REST&nbsp;</div><div class="tag">&nbsp;SQL&nbsp;</div>
+            </div></div>
+            
+        </div>
+        
+        <div class="col-9">Worked on a variety of projects within various business domains, in a small and agile team.<br><br style="line-height: 50%">Contributed to the design and implementation of applications backends, business logic and relational database structures using Python and ORM frameworks. Developed clean, normalized database schemas to reflect business requirements, facilitating complex workflows and system efficiencies.<br><br style="line-height: 50%">Developed backend integration of web APIs using Python, focusing on multi-platform state synchronization and client's workflows automation regarding external services.<br><br style="line-height: 50%">Led migrations within different platforms by designing ETL flows with Python.<br><br style="line-height: 50%">Collaborated closely with project managers to translate client needs into technical specifications, guiding non-technical stakeholders through the possibilities and limitations of proposed solutions to ensure alignment with business objectives.</div>
+        
+    </div>
+</div>
+            
+            <div class="section-box">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAjVBMVEUAAADVOiz/+wAAAAEMDDgtLTj/8wBHcEwAAAAAADj/9wBQTgDYOyvdPCzFvQBOFA8Bj+WyMSTeNRiGgADLOSxLjsHN215bWQBCQQDUywDq6jdycaarV2tpHBUnJwBjZh737g1aDgqSvZfz4QUuktGqqivkiB93UWxnq7fCR0pgJShBEg0AXZIAO3OwISA41Zy4AAAACnRSTlMB////bG3/AHBrVJ6IwQAAAOFJREFUKJF1kNcWgyAQBQ17hISgIVhiSe/9/z8vCGIUcHxzzt27bBBIyNSBBAbyWvb5Xsqik4QsIvZH1DmaD+SkQ6x5T5KhnPAzHkmyKPtUfsmi9AmA+jIwMko3ALD1SqUACr88KLnyjxW3Ru6QbyH24PcEIKGNJFZSnDlGZSutpKh5jiUldpPybEeKNfZCLOWZcY4UGd/jEWkK5XlcqQtRAhfaSdJKpgtP8gZO8pDxSv0DdYPhU966cB832GN3lVkTIWqPXaHWXdn1NCaxDtqSYvW1DDqL2KLoJcOZRaie8gNSehYtkmrdvgAAAABJRU5ErkJggg==" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Data Engineer</strong></div>
+                    <div class="row"><a href="None">ALTEN Italia</a></div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">
+                Sep 2022 - Sep 2023</span><br>[1 year]
+                </div>
+                
+            </div>
+            
+            <div class="row"><br class="half-br"></div>
+            <div class="row"><div class="col" style="padding: 0.5rem;">
+                <div class="tag">&nbsp;Airflow&nbsp;</div><div class="tag">&nbsp;Athena&nbsp;</div><div class="tag">&nbsp;AWS&nbsp;</div><div class="tag">&nbsp;CloudFormation&nbsp;</div><div class="tag">&nbsp;ETL&nbsp;</div><div class="tag">&nbsp;Git&nbsp;</div><div class="tag">&nbsp;Glue&nbsp;</div><div class="tag">&nbsp;Lambda&nbsp;</div><div class="tag">&nbsp;Pandas&nbsp;</div><div class="tag">&nbsp;Python&nbsp;</div><div class="tag">&nbsp;S3&nbsp;</div><div class="tag">&nbsp;Spark&nbsp;</div><div class="tag">&nbsp;StepFunctions&nbsp;</div>
+            </div></div>
+            
+        </div>
+        
+        <div class="col-9">Contributed to the development of a Cloud Data Platform at BMW Europe, leveraging AWS services to manage with evolving business needs data from heterogeneous sources.<br><br style="line-height: 50%">Developed and optimized ETL scripts using AWS Glue, Python, PySpark and other technologies, ensuring efficient data integration and transformation processes, with a strong focus on processes observability (CloudWatch).<br><br style="line-height: 50%">Engineered Lambda functions to support the deployment of microservices, enhancing the platform's responsiveness and functionality.<br><br style="line-height: 50%">Designed and deployed CloudFormation stacks to automate and manage cloud resources effectively, improving deployment consistency and infrastructure as code practices.<br><br style="line-height: 50%">Utilized a broad array of AWS technologies to support the platform's core capabilities.<br><br style="line-height: 50%">Additionally, maintained a legacy JEE8/Spring Web App and its SQSS data flows.</div>
+        
+    </div>
+</div>
+            
+            <div class="section-box">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEVoRsZiPcVaMcJSJ7xfOsJbNcFcM8JkQMWkltfw7ff///+1q91gOcTQy+jo5fORfdG8suHNx+egkNZlQsV6YMna1e2vot2Jc8+VgtNQIL1nR8SaidW/tuH39fxYLsCll9dyWAjXAAAAb0lEQVR4AdWRNQLCUBBEv0ZeXHG4/ynRJp6KyDbrNiN2KlJpI4TVjtvPKc8nkGFEnNhuzqbwSWZALtu5ooSqPhTusY6hM9gEcJKFEG54hks7G1653X+mCw85lizAWzrZP6j/yjwI8/D1gZ+nbF/yAq0HCTu150RMAAAAAElFTkSuQmCC" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Software Engineer</strong></div>
+                    <div class="row"><a href="None">Expleo Group</a></div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">
+                Dec 2020 - Sep 2022</span><br>[1 year 10 months]
+                </div>
+                
+            </div>
+            
+            <div class="row"><br class="half-br"></div>
+            <div class="row"><div class="col" style="padding: 0.5rem;">
+                <div class="tag">&nbsp;Django&nbsp;</div><div class="tag">&nbsp;Docker&nbsp;</div><div class="tag">&nbsp;ElasticSearch&nbsp;</div><div class="tag">&nbsp;Git&nbsp;</div><div class="tag">&nbsp;Kafka&nbsp;</div><div class="tag">&nbsp;MongoDB&nbsp;</div><div class="tag">&nbsp;Pandas&nbsp;</div><div class="tag">&nbsp;Pydantic&nbsp;</div><div class="tag">&nbsp;Python&nbsp;</div><div class="tag">&nbsp;RDFLib&nbsp;</div><div class="tag">&nbsp;REST&nbsp;</div>
+            </div></div>
+            
+        </div>
+        
+        <div class="col-9">Software Engineer at the R&D department.<br><br style="line-height: 50%">Developement of a Document Search Engine using ElasticSearch:<br>- Web Scraping for Data Retrieval with Selenium and BeautifulSoup<br>- Python for ETL/Data Manipulation and DataBase population<br>- Kibana Dashboard for Process Observability<br>- FastAPI backend<br><br style="line-height: 50%">Developement of an automated Data Analysis web application, encompassing business logic formulation, technical design, and coding implementation.<br>- Used FastAPI/Pydantic to build the backend<br>- Python/RDFLib to handle complex Graph Data ETL<br>- Pure Python for business logic implementation<br><br style="line-height: 50%">Developed other smaller web-apps as POCs with Django and MongoDB.<br><br style="line-height: 50%">Partecipated in building the company's Data Warehouse for ML Models training and other data-centric projects by designing, developing, maintaining and deploying ETL workflows to populate the Data Warehouse.<br><br style="line-height: 50%">Supporting other projects with ad-hoc intervetions both inside the department and outside, on clients' projects.</div>
+        
+    </div>
+</div>
             
         </div>
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">Certifications</span>
+                    <span>&nbsp;&nbsp;&nbsp; Certifications</span>
+                </strong>
+            </div>
+            <div class="row">
+                
+                <div class="col-6">
+                    <div class="section-box">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="https://media.licdn.com/dms/image/C560BAQER_QnUTXrPJw/company-logo_100_100/0/1670264051233/amazon_web_services_logo?e=1724284800&v=beta&t=fTH_xED1Voa8gzVl97PoY3xLZFDdFfeZrmMZgR50r4g" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Certified Cloud Practitioner</strong></div>
+                    <div class="row"><a href="None">Amazon Web Services (AWS)</a></div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">Mar 2023</div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+                </div>
+                
+                <div class="col-6">
+                    <div class="section-box">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="https://media.licdn.com/dms/image/C4D0BAQHiNSL4Or29cg/company-logo_200_200/0/1631311446380?e=1724284800&v=beta&t=COdkTeTh5ngHVjkx-s3oQo9KgjITqr0KDFpb9m_qIJ4" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Google IT Support Certificate</strong></div>
+                    <div class="row"><a href="None">Coursera</a></div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">Oct 2020</div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span>&nbsp;&nbsp;&nbsp; Education</span>
                 </strong>
             </div>
             
             <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                Certification 1
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            Certifying Body 1
-                            <a href=""><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            Date Obtained
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="txt-2">
-                            Certification 1 Description
-                        </span>
-                    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="https://yt3.googleusercontent.com/4I8SAMdqZrU7qHE1dsKHWyjltU33x21J2W7PCMAh6ydG2anGUiGHCFiWtSxarsVugRllAG8w=s900-c-k-c0x00ffffff-no-rj" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Bachelor of Business Administration</strong></div>
+                    <div class="row"><a href="None">Universitas Mercatorum</a></div>
                 </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">
+                Sep 2018 - Dec 2024</span>
+                </div>
+                
             </div>
             
+        </div>
+        
+        <div class="col-9">Explored an array of business disciplines including operations management, financial analysis, marketing, and strategy formulation. Microeconomics, macroeconomics, econometrics, statistics to model and understand the environment businesses operate in.</div>
+        
+    </div>
+</div>
+            
             <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                Certification 2
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            Certifying Body 2
-                            <a href=""><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            Date Obtained
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="txt-2">
-                            Certification 2 Description
-                        </span>
-                    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="https://media.licdn.com/dms/image/D4D0BAQF_hs5TnWri0g/company-logo_200_200/0/1688322595962/experis_it_pvt_ltd__logo?e=2147483647&v=beta&t=zbVNxYrG2ntLb_UyaYc0TFGjuk7SO6XnUAtKVg1FgsM" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>Data Analysis Bootcamp</strong></div>
+                    <div class="row"><a href="None">Experis Academy</a></div>
                 </div>
             </div>
+            <div class="row">
+                
+                <div class="col">
+                Oct 2020 - Dec 2020</span>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="col-9">Data Analysis Bootcamp: SQL, Python, Pandas, Statistics</div>
+        
+    </div>
+</div>
+            
+            <div class="section-box">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAh1BMVEUAZswAZcwAZMsJas0SbM4AY8swftRGjtlYm91MlNsRb89dl9yBtOZopeF1rONqpuFwpOBRj9kAX8qhx+zI3vSoy+55r+QxhNYedtGZwutdn9+PvOk2h9czgNSUv+pSmN0AYctJite00vDY6Pj0+f281/IhdNA/gNN5qOEnctCMteWsze7P4/bVKY+bAAABqElEQVR4AWySBaLjIBBAicAwFKkCQUKTerP3v95q+GsfhweMkn9LQz4rTftj7PpPcEMJAyA9R9bTf3AjNiil6oTUZrvr/qJ0rw/Hk2XOO2WHIP9823qQxxjA+ZRyGJUK+w/WdHgcVclEdF0vkjVGbs8V0qnMF3vOWLTXILIcikJaH3J5NeDyfgJ0XfJKH8ymSmTldlMM7mQrAPrseIxSe/oLZnUZE+MIqvMakAt9i5q1q67jRe6xZMZI9/CpsHw6PEmzfjsf2RTApJY0fVEOQB2GqX4bLchh/zKM0sezoe9BSLlCOqll1O89TiSJO38xHM08bmjVdomhQGH4tBkhmbiAcu3qdH6Y38lBKGfPoWR+mkOozqdsON7w9SqJMXQ9M8vBOlr9d57GWWP23t/vzPE4LNBURhPaGF2GdE/gfJBlLqytDzfadnKZtUhebMeTPceSaPWtNqr0cpZyUHb5siUBTBH1Y/hOtUTkumjkSqEOiX4IzamEt5aHQZ20KoVz9oNV2jnHT8vz7p+niGnqK1sFU6Z3TduSCV+U/p+6P9O5+TYcaR5TEADZMCLjEsd2mgAAAABJRU5ErkJggg==" class="img"></div>
+                
+                <div class="col">
+                    <div class="row"><strong>High School Diploma, Computer and Information Sciences</strong></div>
+                    <div class="row"><a href="None">I.T.I.S. N. Copernico</a></div>
+                </div>
+            </div>
+            <div class="row">
+                
+                <div class="col">
+                2008 - 2013</span>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="col-9">Laid the fundaments of my programming and computers knowledge studying Algorithms and Data Structures, Relational Database Design and SQL, Systems and Networking, OOP, Java, Maths and Statistics.</div>
+        
+    </div>
+</div>
             
         </div>
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">Education</span>
-                </strong>
-            </div>
-            
-            <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                Education 1 Title
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            Institution 1
-                            <a href=""><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            Start Date - End Date
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="txt-2">
-                            Education 1 Description
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="section-box">
-                <div class="row">
-                    <div class="col-3">
-                        <strong>
-                            <span class="txt-2">
-                                Education 2 Title
-                            </span>
-                        </strong>
-                        <br>
-                        <span class="txt-3">
-                            Institution 2
-                            <a href=""><i class="bi bi-link-45deg"></i></a>
-                        </span>
-                        <br>
-                        <span class="txt-3">
-                            Start Date - End Date
-                        </span>
-                    </div>
-                    <div class="col">
-                        <span class="txt-2">
-                            Education 2 Description
-                        </span>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span class="txt-1">Personal Projects</span>
+                    <span>&nbsp;&nbsp;&nbsp; Personal Projects</span>
                 </strong>
             </div>
             <div class="row">
@@ -276,14 +336,14 @@
                 <div class="col">
                     <div class="section-box">
                         <strong>
-                            <span class="txt-2">
-                                Project 1 Name
-                                <a href="Project 1 URL"><i class="bi bi-github"></i></a>
+                            <span>
+                                FuzzDict
+                                <a href="https://github.com/davidedigrande/fuzz-dict"><i class="bi bi-github"></i></a>
                             </span>
                         </strong>
                         <br>
-                        <span class="txt-2">
-                            Project 1 Description
+                        <span>
+                            FuzzDict extends Python's built-in dict to offer an extra API for fuzzy logic to match keys. FuzzDict only supports string values for creating keys.
                         </span>
                     </div>
                 </div>
@@ -291,14 +351,14 @@
                 <div class="col">
                     <div class="section-box">
                         <strong>
-                            <span class="txt-2">
-                                Project 2 Name
-                                <a href="Project 2 URL"><i class="bi bi-github"></i></a>
+                            <span>
+                                TryExcept Decorator
+                                <a href="https://github.com/davidedigrande/tryexcept-decorator"><i class="bi bi-github"></i></a>
                             </span>
                         </strong>
                         <br>
-                        <span class="txt-2">
-                            Project 2 Description
+                        <span>
+                            The TryExcept Decorator is a configurable Python decorator that wraps a function around a try-except statement. It allows you to write cleaner code in your functions where an exception may happen and you want to handle it even in complex ways.
                         </span>
                     </div>
                 </div>
@@ -308,21 +368,69 @@
         <div class="section">
             <div class="row">
                 <strong>
-                    <span class="txt-1">About me</span>
+                    <span>&nbsp;&nbsp;&nbsp; Other Experience</span>
+                </strong>
+            </div>
+            <div class="row">
+                
+                <div class="col">
+                    <div class="section-box">
+                        <strong>
+                            <span>
+                                
+                            </span>
+                        </strong>
+                        <span>
+                            2014 - 2018
+                        </span>
+                        
+                        <span>
+                            [~4 years]
+                        </span>
+                        
+                        <br>
+                        <span>
+                            Computer technician in my own home laboratory: building and repairing office and gaming PCs, formatting Operating Systems, configuring software, rescuing data from disks.
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="section-box">
+                        <strong>
+                            <span>
+                                
+                            </span>
+                        </strong>
+                        <span>
+                            2016 - 2018
+                        </span>
+                        
+                        <span>
+                            [~2 years]
+                        </span>
+                        
+                        <br>
+                        <span>
+                            Graphic Designer using Adobe Photoshop and Adobe Illustrator to make web graphics, logos, posters, and book covers.
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <strong>
+                    <span>&nbsp;&nbsp;&nbsp; About me</span>
                 </strong>
             </div>
             <div class="section-box">
-                <!-- <strong><span class="txt-2">Bio</span></strong><br> -->
-                <span class="txt-2">
-                    Brief bio or summary about yourself
+                <!-- <strong><span>Bio</span></strong><br> -->
+                <span>
+                    Fascinated by technology since childhood, I studied ITC in school, after which I immediately began working as a Computer Technician in my own laboratory. Alongside, I gained a diverse range of experience in areas such as graphic design, music, sports, and customer service. Later in life I felt the need to broaden my knowledge and understand more about society, so I enrolled in university to study Economics. Although I loved the subject, I found it lacked practicality. After taking the statistics exam, I was eager to learn more, so I got a scholarship for a Data Analysis bootcamp and this sparked my programming passion again through Python. I then realized my potential to become a fully-fledged software engineer. This journey has led me where I am today, successfully expressing my skills on the field.
                 </span>
             </div>
-            <!-- <div class="section-box">
-                <strong><span class="txt-2">Personal interests</span></strong><br>
-                <span class="txt-2">
-                    Brief description of your interests and hobbies<br>
-                </span>
-            </div> -->
         </div>
     </div>
 </body>

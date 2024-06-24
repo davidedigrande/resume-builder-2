@@ -1,12 +1,33 @@
 @media print {
     @page {
         margin: 1.25%;
+        margin-top: 2.5%;
+    }
+
+    @page :first {
+        margin-top: 1.25%;
     }
 }
 
+@font-face {
+    font-family: "Fira Sans";
+    src: url('fonts/fira/eot/FiraSans-Regular.eot');
+    src: url('fonts/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
+         url('fonts/fira/woff2/FiraSans-Regular.woff2') format('woff2'),
+         url('fonts/fira/woff/FiraSans-Regular.woff') format('woff'),
+         url('fonts/fira/woff2/FiraSans-Regular.ttf') format('truetype');
+  }
+
+:root {
+    --background-color: white;
+    --text-color: black;
+    --secondary-color: rgb(240 240 240);
+}
+
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Fira Sans', sans-serif;
     font-size: 10pt;
 }
 
@@ -17,13 +38,15 @@ body {
 
 .section {
     page-break-inside: avoid;
+    
 }
 
 .section-box {
-    background-color: rgba(0, 0, 0, .0250);
+    background-color: var(--secondary-color);
     border-radius: 0.75rem;
     padding: 0.75rem;
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 a:link { text-decoration: none; }

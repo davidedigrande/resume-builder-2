@@ -1,17 +1,25 @@
 <div class="section-box">
     <div class="row">
-        <div class="col-3">
+        <div class="col">
             <div class="row">
+                {% if item.img %}
                 <div class="col-auto" style="padding-right: 0.5rem"><img src="{{item.img}}" class="img"></div>
+                {% endif %}
                 <div class="col">
-                    <div class="row"><strong>{{item.role}}</strong></div>
-                    <div class="row"><a href="{{item.url}}">{{item.company}}</a></div>
+                    <div class="row"><strong>{{item.title}}</strong></div>
+                    <div class="row"><a href="{{item.url}}">{{item.organization}}</a></div>
                 </div>
             </div>
             <div class="row">
+                {% if item.date_obtained %}
+                <div class="col">{{item.date_obtained}}</div>
+                {% elif item.date_until == "Present" %}
+                <div class="col">{{item.date_from}} - <strong>present</strong></div>
+                {% else %}
                 <div class="col">
                 {{item.date_from}} - {{item.date_until}}</span>{% if item.duration %}<br>[{{item.duration}}]{% endif %}
                 </div>
+                {% endif %}
             </div>
             {% if item.tags %}
             <div class="row"><br class="half-br"></div>
@@ -20,6 +28,8 @@
             </div></div>
             {% endif %}
         </div>
-        <div class="col-9"><span>{{item.description}}</span></div>
+        {% if item.description %}
+        <div class="col-9">{{item.description}}</div>
+        {% endif %}
     </div>
 </div>

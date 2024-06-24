@@ -1,0 +1,45 @@
+<div class="section-box">
+    <div class="row">
+        <div class="col-3">
+            <strong>
+                <span>
+                    {{item.title}}
+                </span>
+            </strong>
+            <br>
+            <span>
+                {{item.organization}}
+                <a href="{{item.url}}"></a>
+            </span>
+            <br>
+            <span>
+                {{item.date_from}} - {{item.date_until}}
+            </span>
+        </div>
+        <div class="col">
+            <span>
+                {{item.description}}
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="section-box">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-auto" style="padding-right: 0.5rem"><img src="{{item.img}}" class="img"></div>
+                <div class="col">
+                    <div class="row"><strong>{{item.title}}</strong></div>
+                    <div class="row"><a href="{{item.url}}">{{item.organization}}</a></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                {{item.date_obtained}}
+                </div>
+            </div>
+        </div>
+        <div class="col-9"><span>{{item.description}}</span></div>
+    </div>
+</div>
