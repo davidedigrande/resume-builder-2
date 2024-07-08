@@ -45,6 +45,7 @@ body {
     background-color: var(--secondary-color);
     border-radius: 0.75rem;
     padding: 0.75rem;
+    padding-bottom: 0;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
@@ -56,10 +57,10 @@ a { color: inherit !important; }
 .tag {
     background-color: rgba(0, 0, 0, 0.075);
     border-radius: 0.5rem;
-    padding: 0.125rem;
-    margin: 0.125rem;
+    padding: 0.1125rem;
+    margin: 0.1125rem;
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
 }
 
 .img {
