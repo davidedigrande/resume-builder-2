@@ -45,7 +45,6 @@ body {
     background-color: var(--secondary-color);
     border-radius: 0.75rem;
     padding: 0.75rem;
-    padding-bottom: 0;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }

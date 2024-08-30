@@ -1,15 +1,8 @@
 <div class="section-box">
     <div class="row">
         <div class="col">
-            <div class="row">
-                {% if item.img %}
-                <div class="col-auto" style="padding-right: 0.5rem"><img src="{{item.img}}" class="img"></div>
-                {% endif %}
-                <div class="col">
-                    <div class="row"><strong>{{item.title}}</strong></div>
-                    <div class="row"><a href="{{item.url}}">{{item.organization}}</a></div>
-                </div>
-            </div>
+            <div class="row"><div class="col"><strong>{{item.title}}</strong></div></div>
+            <div class="row"><div class="col"><a href="{{item.url}}">{{item.organization}}</a></div></div>
             <div class="row">
                 {% if item.date_obtained %}
                 <div class="col">{{item.date_obtained}}</div>
@@ -22,7 +15,6 @@
                 {% endif %}
             </div>
             {% if item.tags %}
-            <div class="row"><br class="half-br"></div>
             <div class="row"><div class="col" style="padding: 0.5rem;">
                 {% for tag in item.tags|sort %}<div class="tag">&nbsp;{{ tag }}&nbsp;</div>{% endfor %}
             </div></div>
