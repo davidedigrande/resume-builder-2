@@ -3,9 +3,6 @@
         margin: 2.5%;
     }
 
-    @page :first {
-        margin-top: 1.25%;
-    }
 }
 
 @font-face {
@@ -96,4 +93,8 @@ a { color: inherit !important; }
     margin-top: 0.5rem;
     border-radius: 0.75rem;
     padding: 0.5rem;
+}
+
+.container-box {
+    max-width: 297mm;
 }
