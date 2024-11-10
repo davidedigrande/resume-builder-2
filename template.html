@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'>
-    <meta charset="UTF-8">
-    </meta>
 </head>
 
 <body>
@@ -21,136 +19,47 @@
             </div>
             <div class="col-4">
                 <div class="row" style="justify-content: flex-end;">
-                    davidedigrande.dev@gmail.com&nbsp;<i class="bi bi-envelope"></i>
+                    <a href="mailto:davidedigrande.dev@gmail.com">davidedigrande.dev@gmail.com</a>&nbsp;<i class="bi bi-envelope"></i>
                 </div>
                 <div class="row" style="justify-content: flex-end;">
-                    +39 345 770 2684&nbsp; <i class="bi bi-whatsapp"></i>
+                    <a href="https://wa.me/+393457702684">+39 345 770 2684</a>&nbsp; <i class="bi bi-whatsapp"></i>
                 </div>
                 <div class="row" style="justify-content: flex-end;">
-                    GitHub&nbsp;<i class="bi bi-github"></i>
+                    <a href="https://github.com/davidedigrande/">github.com/davidedigrande</a>&nbsp;<i class="bi bi-github"></i>
                 </div>
                 <div class="row" style="justify-content: flex-end;">
-                    LinkedIn&nbsp; <i class="bi bi-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/davide-di-grande">linkedin.com/in/davide-di-grande/</a>&nbsp; <i class="bi bi-linkedin"></i>
                 </div>
             </div>
         </div>
         <hr class="hr-lm">
-        <div class="section">
-            <div class="row">
-                <span>
-                    <strong><span>&nbsp;&nbsp;&nbsp; Relevant Experience
-                            &nbsp;&nbsp;&nbsp;</span></strong>
-                    <span id="months-counter"></span>
-                    <script>
-                        var certainDate = new Date("2020-12-01");
-                        var today = new Date();
-                        var monthsPassed = (today.getFullYear() - certainDate.getFullYear()) * 12;
-                        monthsPassed -= certainDate.getMonth();
-                        monthsPassed += today.getMonth();
-                        yoe = parseInt(monthsPassed / 12);
-                        moe = monthsPassed - (yoe * 12);
-                        document.getElementById("months-counter").textContent = '[' + yoe.toString() + ' years ' + moe.toString() + ' months as of ' + today.toLocaleDateString() + ']';
-                    </script>
-                </span>
+
+        {% for item in experience %}
+        {% with type='work' %}
+        {% include 'template_experience.html'%}
+        {% endwith %}
+        {% endfor %}
+
+        <div class="row">
+            {% for item in certifications %}
+            <div class="col-4">
+                {% with type='certification' %}
+                {% include 'template_experience.html' %}
+                {% endwith %}
             </div>
-            {% for item in experience %}
-            {% include 'template_experience.html' %}
             {% endfor %}
         </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span>&nbsp;&nbsp;&nbsp; Certifications</span>
-                </strong>
-            </div>
-            <div class="row">
-                {% for item in certifications %}
-                <div class="col-6">
-                    {% include 'template_experience.html' %}
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span>&nbsp;&nbsp;&nbsp; Education</span>
-                </strong>
-            </div>
+
+        <div class="row">
             {% for item in education %}
-            {% include 'template_experience.html' %}
+            <div class="col-4">
+                {% with type='education' %}
+                {% include 'template_experience.html' %}
+                {% endwith %}
+            </div>
             {% endfor %}
         </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span>&nbsp;&nbsp;&nbsp; Personal Projects</span>
-                </strong>
-            </div>
-            <div class="row">
-                {% for item in projects %}
-                <div class="col">
-                    <div class="section-box">
-                        <strong>
-                            <span>
-                                {{item.name}}
-                                <a href="{{item.url}}"><i class="bi bi-github"></i></a>
-                            </span>
-                        </strong>
-                        <br>
-                        <span>
-                            {{item.description}}
-                        </span>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span>&nbsp;&nbsp;&nbsp; Other Experience</span>
-                </strong>
-            </div>
-            <div class="row">
-                {% for item in other_experience %}
-                <div class="col">
-                    <div class="section-box">
-                        <strong>
-                            <span>
-                                {{item.role}}
-                            </span>
-                        </strong>
-                        <span>
-                            {{item.date_from}} - {{item.date_until}}
-                        </span>
-                        {% if item.duration %}
-                        <span>
-                            [{{item.duration}}]
-                        </span>
-                        {% endif %}
-                        <br>
-                        <span>
-                            {{item.description}}
-                        </span>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="section">
-            <div class="row">
-                <strong>
-                    <span>&nbsp;&nbsp;&nbsp; About me</span>
-                </strong>
-            </div>
-            <div class="section-box">
-                <!-- <strong><span>Bio</span></strong><br> -->
-                <span>
-                    {{bio}}
-                </span>
-            </div>
-        </div>
+
     </div>
 </body>
 

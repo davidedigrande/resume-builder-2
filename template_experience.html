@@ -1,27 +1,32 @@
-<div class="section-box">
-    <div class="row">
-        <div class="col">
-            <div class="row"><div class="col"><strong>{{item.title}}</strong></div></div>
-            <div class="row"><div class="col"><a href="{{item.url}}">{{item.organization}}</a></div></div>
-            <div class="row">
-                {% if item.date_obtained %}
-                <div class="col">{{item.date_obtained}}</div>
-                {% elif item.date_until == "Present" %}
-                <div class="col">{{item.date_from}} - <strong>present</strong></div>
-                {% else %}
-                <div class="col">
-                {{item.date_from}} - {{item.date_until}}</span>{% if item.duration %}<br>[{{item.duration}}]{% endif %}
-                </div>
-                {% endif %}
-            </div>
-            {% if item.tags %}
-            <div class="row"><div class="col" style="padding: 0.5rem;">
-                {% for tag in item.tags|sort %}<div class="tag">&nbsp;{{ tag }}&nbsp;</div>{% endfor %}
-            </div></div>
+<div class="row row-box">
+    <div class="col">
+        <div class="row">
+            {% if type == "work" %}
+            <i class="bi bi-suitcase-lg-fill"></i>
+            {% elif type == "certification" %}
+            <i class="bi bi-bookmark-fill"></i>
+            {% elif type == "education" %}
+            <i class="bi bi-mortarboard-fill"></i>
+            {% endif %}
+            &nbsp;<strong>{{item.title}}</strong>
+        </div>
+        <div class="row"><a href="{{item.url}}">{{item.organization}}</a></div>
+        <div class="row">
+            {% if item.date_obtained %}
+            {{item.date_obtained}}
+            {% elif item.date_until == "Present" %}
+            {{item.date_from}} - <strong>present</strong>
+            {% else %}
+            {{item.date_from}} - {{item.date_until}}</span>{% if item.duration %}<br>[{{item.duration}}]{% endif %}
             {% endif %}
         </div>
-        {% if item.description %}
-        <div class="col-9">{{item.description}}</div>
+        {% if item.tags %}
+        <div class="row">
+            {% for tag in item.tags|sort %}<div class="tag">&nbsp;{{ tag }}&nbsp;</div>{% endfor %}
+        </div>
         {% endif %}
     </div>
+    {% if item.description %}
+    <div class="col-9">{{item.description}}</div>
+    {% endif %}
 </div>

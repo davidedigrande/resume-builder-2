@@ -1,7 +1,6 @@
 @media print {
     @page {
-        margin: 1.25%;
-        margin-top: 2.5%;
+        margin: 2.5%;
     }
 
     @page :first {
@@ -18,17 +17,14 @@
          url('fonts/fira/woff2/FiraSans-Regular.ttf') format('truetype');
   }
 
-:root {
-    --background-color: white;
-    --text-color: black;
-    --secondary-color: rgb(240 240 240);
+html {
+    font-size: 10pt;
 }
 
 body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Fira Sans', sans-serif;
-    font-size: 10pt;
 }
 
 .main-content {
@@ -38,15 +34,14 @@ body {
 
 .section {
     page-break-inside: avoid;
-    
 }
 
 .section-box {
     background-color: var(--secondary-color);
     border-radius: 0.75rem;
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    padding-top: 1rem;
+    /* margin-bottom: 0.5rem;
+    margin-top: 0.5rem; */
 }
 
 a:link { text-decoration: none; }
@@ -56,10 +51,10 @@ a { color: inherit !important; }
 .tag {
     background-color: rgba(0, 0, 0, 0.075);
     border-radius: 0.5rem;
-    padding: 0.1125rem;
-    margin: 0.1125rem;
+    padding: 0.125rem;
+    margin: 0.125rem;
     display: inline-block;
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
 }
 
 .img {
@@ -69,4 +64,36 @@ a { color: inherit !important; }
 
 .half-br {
     line-height: 50%;
+}
+
+.col {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.col-8 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.col-4 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.col-3 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.row-box {
+    background-color: white;
+    margin-top: 0.5rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
 }
