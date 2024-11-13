@@ -1,32 +1,40 @@
-<div class="row row-box">
-    <div class="col">
-        <div class="row">
-            {% if type == "work" %}
-            <i class="bi bi-suitcase-lg-fill"></i>
-            {% elif type == "certification" %}
-            <i class="bi bi-bookmark-fill"></i>
-            {% elif type == "education" %}
-            <i class="bi bi-mortarboard-fill"></i>
-            {% endif %}
-            &nbsp;<strong>{{item.title}}</strong>
-        </div>
-        <div class="row"><a href="{{item.url}}">{{item.organization}}</a></div>
-        <div class="row">
-            {% if item.date_obtained %}
-            {{item.date_obtained}}
-            {% elif item.date_until == "Present" %}
-            {{item.date_from}} - <strong>present</strong>
-            {% else %}
-            {{item.date_from}} - {{item.date_until}}</span>{% if item.duration %}<br>[{{item.duration}}]{% endif %}
-            {% endif %}
-        </div>
-        {% if item.tags %}
-        <div class="row">
-            {% for tag in item.tags|sort %}<div class="tag">&nbsp;{{ tag }}&nbsp;</div>{% endfor %}
-        </div>
-        {% endif %}
-    </div>
-    {% if item.description %}
-    <div class="col-9">{{item.description}}</div>
+<div class="row-box">
+
+<div class="row">
+    {% if type == "work" %}
+    <i class="bi bi-suitcase-lg-fill"></i>
+    {% elif type == "certification" %}
+    <i class="bi bi-bookmark-fill"></i>
+    {% elif type == "education" %}
+    <i class="bi bi-mortarboard-fill"></i>
     {% endif %}
+    &nbsp;<strong>{{item.title}}</strong>
+    &nbsp;|&nbsp;
+    <a href="{{item.url}}">{{item.organization}}</a>
+    &nbsp;|&nbsp;
+    {% if item.date_obtained %}
+    {{item.date_obtained}}
+    {% elif item.date_until == "Present" %}
+    {{item.date_from}} - <strong>present</strong>
+    {% else %}
+        {% if item.duration %}
+        <span>{{item.date_from}} - {{item.date_until}} [{{item.duration}}]</span>
+        {% else %}
+        <span>{{item.date_from}} - {{item.date_until}}</span>
+        {% endif %}
+    {% endif %}
+</div>
+
+{% if item.description %}
+<div class="row">
+{{item.description}}
+</div>
+{% endif %}
+
+{% if item.tags %}
+<div class="row">
+{% for tag in item.tags|sort %}<div class="tag">&nbsp;{{ tag }}&nbsp;</div>{% endfor %}
+</div>
+{% endif %}
+
 </div>

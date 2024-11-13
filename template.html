@@ -40,25 +40,17 @@
         {% endwith %}
         {% endfor %}
 
-        <div class="row">
-            {% for item in certifications %}
-            <div class="col-4">
-                {% with type='certification' %}
-                {% include 'template_experience.html' %}
-                {% endwith %}
-            </div>
-            {% endfor %}
-        </div>
+        {% for item in certifications %}
+        {% with type='certification' %}
+        {% include 'template_experience.html' %}
+        {% endwith %}
+        {% endfor %}
 
-        <div class="row">
-            {% for item in education %}
-            <div class="col-4">
-                {% with type='education' %}
-                {% include 'template_experience.html' %}
-                {% endwith %}
-            </div>
-            {% endfor %}
-        </div>
+        {% for item in education %}
+        {% with type='education' %}
+        {% include 'template_experience.html' %}
+        {% endwith %}
+        {% endfor %}
 
     </div>
 </body>
