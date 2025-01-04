@@ -37,8 +37,6 @@ body {
     background-color: var(--secondary-color);
     border-radius: 0.75rem;
     padding-top: 1rem;
-    /* margin-bottom: 0.5rem;
-    margin-top: 0.5rem; */
 }
 
 a:link { text-decoration: none; }
@@ -92,7 +90,6 @@ a { color: inherit !important; }
 
 .row-box {
     background-color: white;
-    margin-top: 0.5rem;
     border-radius: 0.75rem;
     padding: 0.5rem;
 }
